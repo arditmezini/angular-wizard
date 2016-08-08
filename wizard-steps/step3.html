@@ -1,0 +1,25 @@
+<div style="margin-top:20px;">
+	<div class="row">
+		<div class="col-lg-8 col-md-8 col-xs-8">
+			<form name="step3" novalidate>
+				<div ng-init="setForm(step3);"></div>
+				<div class="form-group" ng-class="{'has-error': step3.inputfn.$invalid}"> 
+					<label for="inputfn">Firstname:</label>
+					<input type="text" id="inputfn" name="inputfn"  class="form-control" ng-model="wizard.personal.firstname" placeholder="Firstname" required />
+				</div>
+				<div class="form-group" ng-class="{'has-error': step3.inputln.$invalid}">
+					<label for="inputln">Lastname:</label>
+					<input type="text" id="inputln" name="inputln" class="form-control" ng-model="wizard.personal.lastname" placeholder="Lastname" required />
+				</div>
+				<div class="form-group">
+					<label for="inputln">Gender:</label><br/>
+					<input type="radio" value="M" ng-model="wizard.personal.sex"/> Male <input type="radio" value="F" ng-model="wizard.personal.sex"/> Female
+				</div>
+				<div class="form-group">
+					<label for="inputln">Address:</label><br/>
+					<textarea ng-model="wizard.personal.address" class="form-control" placeholer="Address"></textarea>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

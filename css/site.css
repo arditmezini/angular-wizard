@@ -1,0 +1,16 @@
+.content{
+    margin: 10px 0 0 10px;
+}
+
+.center {
+  margin: auto;
+    width: 50%;
+}
+
+.alert-custom {
+	padding: 0;
+}
+
+.dropdown {
+	padding: 8px 48px 8px 10px;
+}

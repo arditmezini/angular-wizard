@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html lang='en'>
+	<head>
+		<meta charset="utf8">
+		<!-- Load css files -->
+		<link rel="stylesheet" href="css/bootstrap-combined.min.css">
+		<link href="css/site.css" rel="stylesheet">
+		<!--Load js files-->
+		<script src="lib/jquery-2.2.4.min.js"></script>
+		<script src="lib/bootstrap.min.js"></script>
+		<script src="lib/underscore-min.js"></script>
+		<script src="lib/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head> 
+<body ng-app="myApp" class="center">
+	<div class="content" ng-controller="WizardCtrl">
+
+	<span ng-repeat="step in steps">
+		<button class="alert"  ng-class="{'alert-info': $index === getCurrentStepIndex()}">
+			<a>{{step}}</a>
+		</button>
+	</span>
+	<hr>
+	<div class="progress">
+  		<div class="progress-bar" role="progressbar" aria-valuenow="getCurrentStepIndex()"
+  			aria-valuemin="0" aria-valuemax="3" ng-style="{width: getCurrentStepIndexProgressbar() * 33.3 + '%'}">
+  		</div>
+	</div>
+	<hr>
+	<div ng-switch on="selection">
+		<!-- First Step -->
+		<div ng-switch-when="1 - Create Your Account">
+			<div ng-include src="'wizard-steps/step1.html'"> </div>
+		</div>
+
+		<!-- Second Step -->
+		<div ng-switch-when="2 - Educationals Profiles">
+			<div ng-include src="'wizard-steps/step2.html'"> </div>
+		</div>
+	
+		<!-- Third Step -->
+		<div ng-switch-when="3 - Personal Details">
+			<div ng-include src="'wizard-steps/step3.html'"> </div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="pager pull-left">
+		<button class="btn btn-default" ng-disabled="!hasPrevStep()" ng-click="decrementStep()">
+			&larr; Previous Step
+		</button>
+		<button class="btn btn-default" ng-disabled="!hasNextStep() || !isValid()" ng-click="incrementStep()">
+			Next Step &rarr;
+		</button>
+	</div>
+	<div class="pull-right"><button ng-show="!hasNextStep() && isValid()" ng-click="saveWizard()" style="margin:20px 0;" class="btn btn-success">Save</button></div>
+	<div class="clearfix"></div>
+	<div>
+		<pre>{{wizard | json}}</pre></div>
+	</div>
+</div>
+</body>
+</html>
