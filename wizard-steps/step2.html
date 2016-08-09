@@ -5,25 +5,27 @@
 				<div ng-init="setForm(step2);"></div>
 				<div class="form-group">
 					<label for="university">Select University:</label><br/>
-					<select class="dropdown" name="university" id="university" required ng-model="wizard.education.university" >
+					<select class="dropdown" name="university" id="university" required ng-model="wizard.education.university">
 						<option value=" " selected></option>
 						<option value="Oxford">Oxford</option>
 						<option value="Cambridge">Cambridge</option>
 						<option value="MIT">MIT</option>
 					</select>
 					<div>
-						<span class="alert alert-danger alert-custom"  ng-show="!(wizard.education.university.length > 2)">Not valid university!</span>
+						<span class="alert alert-danger alert-custom" ng-show="!(wizard.education.university.length > 2)">Not valid university!</span>
 					</div>
 				</div>
 				<div class="form-group" ng-class="{'has-error': step2.averagemark.$invalid}">
 					<label for="averagemark">Average Mark:</label>
-					<input type="number" id="averagemark" name="averagemark" class="form-control" ng-model="wizard.education.averagemark" placeholder="Average Mark" required/>
+					<input type="number" id="averagemark" name="averagemark" class="form-control" ng-model="wizard.education.averagemark" placeholder="Average Mark"
+						required/>
 				</div>
 				<div class="form-group">
 					<label for="finisheddate">Finished Date:(Format: yyyy-mm-dd)</label>
-					<input type="date" id="finisheddate" name="finisheddate" class="form-control" ng-model="wizard.education.finisheddate" placeholder="Finished Date" />
+					<input type="date" id="finisheddate" name="finisheddate" class="form-control" ng-model="wizard.education.finisheddate" placeholder="Finished Date"
+					/>
 					<div>
-						<span class="alert alert-danger alert-custom"  ng-show="!step2.finisheddate">Not valid date!</span>
+						<span class="alert alert-danger alert-custom" ng-show="!step2.finisheddate">Not valid date!</span>
 					</div>
 				</div>
 			</form>
