@@ -1,0 +1,29 @@
+{
+  "name": "angular-wizard",
+  "version": "0.0.1",
+  "description": "Angular Wizard made easy.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klajd/angular-wizard.git"
+  },
+  "keywords": [
+    "angular",
+    "wizard"
+  ],
+  "author": "Ardit Mezini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klajd/angular-wizard/issues"
+  },
+  "homepage": "https://github.com/klajd/angular-wizard#readme",
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

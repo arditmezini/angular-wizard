@@ -1,0 +1,13 @@
+# node bower typings
+node_modules
+bower_components
+typings
+
+# logs
+npm-debug.log
+
+# editor
+.vscode
+
+# temp
+temp
